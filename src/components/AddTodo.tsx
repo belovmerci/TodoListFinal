@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddTodo.css';
 
 interface AddTodoProps {
   addTodo: (text: string) => void;
@@ -10,17 +11,18 @@ const AddTodo: React.FC<AddTodoProps> = ({ addTodo, clearAll }) => {
 
   const handleAdd = () => {
     if (text.trim()) {
-      addTodo(text.trim());
+      addTodo(text);
       setText('');
     }
   };
 
   return (
-    <div>
+    <div className="add-todo">
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder="Введите задачу"
       />
       <button onClick={handleAdd}>Добавить</button>
       <button onClick={clearAll}>Очистить все</button>

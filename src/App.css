@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: #333;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .App-logo {
@@ -35,4 +43,172 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app {
+  text-align: center;
+  background-color: #2c2c2c;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.add-todo, .filter-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-todo input {
+  height: 1.5em;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.add-todo button {
+  height: calc(1.5em + 20px);
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-todo button:hover {
+  background-color: #ff4500;
+}
+
+.filter-buttons button {
+  height: calc(1.5em + 20px);
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #1c86ee;
+}
+
+.filter-buttons button.active {
+  background-color: #4682b4;
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.todo-item .text {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item.deleted {
+  opacity: 0.5;
+}
+
+.todo-item button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #ff6347;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-item .text:hover {
+  white-space: normal;
+}
+
+.todo-item button {
+  background-color: #ff5555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #ff4500;
+}
+
+.todo-item span:hover {
+  background-color: #444;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #666;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #666;
 }

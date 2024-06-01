@@ -1,16 +1,18 @@
 import React from 'react';
+import './FilterButtons.css';
 
 interface FilterButtonsProps {
-  filter: string;
-  setFilter: (filter: string) => void;
+  setFilter: (filter: 'all' | 'completed' | 'deleted' | 'active') => void;
 }
 
-const FilterButtons: React.FC<FilterButtonsProps> = ({ filter, setFilter }) => {
+const FilterButtons: React.FC<FilterButtonsProps> = ({ setFilter }) => {
   return (
-    <div>
+    <div className="filter-buttons">
       <button onClick={() => setFilter('all')}>Показать все</button>
+      <button onClick={() => setFilter('active')}>Показать активные</button>
       <button onClick={() => setFilter('completed')}>Показать завершённые</button>
       <button onClick={() => setFilter('deleted')}>Показать удалённые</button>
+    
     </div>
   );
 };
